@@ -1,5 +1,6 @@
 package com.syaifullahatthoriq.recyclerview.adapter
 
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,7 @@ import com.syaifullahatthoriq.recyclerview.model.Pemain
 class AdapterTeamBola (private val context : Context,
                       private var data : List<Pemain>?,
                       private val  itemclick : OnClickListener)
-                      : RecyclerView.Adapter<AdapterTeamBola.ViewHolder>() {
+                      : RecyclerView.Adapter<AdapterTeamBola.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -35,12 +36,9 @@ class AdapterTeamBola (private val context : Context,
     inner class  ViewHolder( val binding : ListItemPemainBinding) : RecyclerView.ViewHolder(binding.root) {
         var foto = binding.image
         var nama = binding.txtnama
-
     }
-
     interface OnClickListener {
         fun detailData(item : Pemain?)
     }
-
 
 }
